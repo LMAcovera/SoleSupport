@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Customer Support Chat</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            <div class="logo-container">
+                <i class="fas fa-shoe-prints"></i>
+                <h2>SoleSupport</h2>
+            </div>
+            <p class="status"><span class="status-dot"></span> Online</p>
+        </div>
+        
+        <div class="chat-messages" id="chatMessages">
+            <div class="message support-message">
+                <div class="message-avatar">
+                    <i class="fas fa-shoe-prints"></i>
+                </div>
+                <p>👋 Welcome to SoleSupport! How can I help you find your perfect pair today?</p>
+            </div>
+        </div>
+
+        <div class="suggestions" id="suggestionBox">
+            <button class="suggestion-btn" onclick="selectSuggestion('What is your price range?')">
+                <i class="fas fa-fire"></i> Price Range?
+            </button>
+            <button class="suggestion-btn" onclick="selectSuggestion('Show me the latest release')">
+                <i class="fas fa-star"></i> Latest Release
+            </button>
+            <button class="suggestion-btn" onclick="selectSuggestion('Where is your store located?')">
+                <i class="fas fa-map-marker-alt"></i> Store Location
+            </button>
+            <button class="suggestion-btn" onclick="selectSuggestion('Size guide')">
+                <i class="fas fa-ruler"></i> Size Guide
+            </button>
+        </div>
+
+        <div class="chat-input">
+            <div class="input-container">
+                <input type="text" id="messageInput" placeholder="Type your message...">
+                <div class="input-buttons">
+                    <button class="emoji-btn" onclick="toggleSuggestions()">
+                        <i class="fas fa-lightbulb"></i>
+                    </button>
+                    <button class="send-btn" onclick="sendMessage()">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html> 
