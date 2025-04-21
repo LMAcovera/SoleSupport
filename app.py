@@ -4,9 +4,8 @@ import time
 import re
 
 app = Flask(__name__)
-app.secret_key = 'your_secret_key_here'  # Required for session management
+app.secret_key = 'your_secret_key_here'
 
-# Enhanced responses database with categories and context
 responses = {
     "greeting": {
         "patterns": ["hello", "hi", "hey", "good morning", "good afternoon", "good evening", "yo", "hola", "kumusta", "greetings", "mabuhay", "magandang umaga", "magandang hapon", "magandang gabi", "good day", "howdy", "what's up", "sup", "aloha", "namaste", "magandang tanghali", "magandang araw po", "kamusta po", "good evening po", "hello po", "hi po"],
